@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+  <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <title>Dream Details</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    :root {
+      --primary-color: #7c3aed;
+    }
+  </style>
+</head>
+<body class="bg-[#111118] text-white" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+
+<div class="relative flex min-h-screen flex-col">
+  <!-- Header -->
+  <header class="flex items-center justify-between p-4 sticky top-0 bg-[#111118]/80 backdrop-blur-sm z-10">
+    <button class="flex size-10 items-center justify-center">
+      <span class="material-symbols-outlined"> arrow_back </span>
+    </button>
+    <h1 class="text-xl font-bold">Dream Details</h1>
+    <div class="w-10"></div>
+  </header>
+
+  <!-- Main -->
+  <main class="px-4 flex-1">
+    <!-- Summary -->
+    <section class="mt-6">
+      <h2 class="text-2xl font-bold tracking-tight">Dream Summary</h2>
+      <p id="summaryText" class="text-gray-300 mt-4">
+        <!-- GPT가 생성한 최종 요약이 여기에 들어갑니다 -->
+      </p>
+    </section>
+
+    <!-- Keywords -->
+    <section class="mt-8">
+      <h2 class="text-2xl font-bold tracking-tight">Keywords</h2>
+      <div id="keywords" class="flex gap-3 mt-4 flex-wrap">
+        <!-- GPT가 추출한 키워드 pill이 여기에 동적으로 생성됩니다 -->
+      </div>
+    </section>
+
+    <!-- Dream Images -->
+    <section class="mt-8">
+      <h2 class="text-2xl font-bold tracking-tight">Dream Images</h2>
+      <div id="imageGrid" class="grid grid-cols-2 gap-4 mt-4">
+        <!-- 처음엔 로딩 플레이스홀더 -->
+        <div class="flex items-center justify-center aspect-square bg-gray-800 rounded-2xl animate-pulse text-gray-400 col-span-2">
+          Generating dream images...
+        </div>
+      </div>
+    </section>
+    <!-- <section class="mt-8">
+      <h2 class="text-2xl font-bold tracking-tight">Dream Images</h2>
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-2xl"
+             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2guqCUaMQj5L-Xakezo7ZDb9X5C6hCMlZ-Xsad83GM6YFnAaQb4jB4NBMvqEGPSp8wKse-wFWW83Kba9CRhk1P7LaKDdWNGixO3ZtQhW9pcgU6q4mrI9xN-ou4i8yS4poAeFFsGnLpmv-YRZVHVShJvEFRSIWpDk_BQmp7OvZ15xhm7L9i8QXwjPTq-yYiU8U9bj31eOZCbecrTF05JjJhWLybupAp5kdhoJoIqOVxuxP_bhP5C7wS6MdS4eHGiXqrXK7Wi7Pq6BL");'></div>
+        <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-2xl"
+             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXCBik38je6MJoCMNrMl2wgJkFM_3jrBfZlOqpWZJ20GVcZJpMrF06rI2aAOwpEoP4bj0JjBPbOCqaf0ZkqzDogHWUbY-7S171s-X6s4mbuoCuPo5ENyG3YX1sk3IrbnU003yme0q0s-aHNYPmWpXnLDVrIHVrvPZpOX5IylqTIh2D0giai4YQZzNwviy_ZV7eD-qsel6TvXOuYEFHicVpojTx454IWIKApy_sDRnlXFSGmBeAQPxD7GdOpaZV5k4PPQFPknmMp0lV");'></div>
+        <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-2xl"
+             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDk62m-mo2__vozRyDbp_hswZKcprmHQDQF-hy9tI-ft_BCmiCINxZ9USq0tKBcUYnMaT8tNk5d9H_MQmVAxY3TQhewpY6ARFxnTMDwNmJPWU0VtHoMLxz0_be_-l9iZllApbfNfMzE8HffZP8qdK2VaPv-72PHFye9-C-LHpOiNGWcfvdvvJdPH0w8quuD3qVXn7yWpqgzvQTmVIiDubs_0B-CWViXrXXpWKppiMKhr3Pke6U26EIBMD_hfinWJzLgHNmKyXZYa_C3");'></div>
+        <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-2xl"
+             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAB5J7PJaFTZ_DCyAfdagH7mdQKtFKf517XkBVQWiqb8PQt3Y4HAySE78ZRq4Rc31UCyMXyTWks_O43f0SuyIWRH3vMol0tjqX5Xs5qErPacZ0Mll18MZ1itU-tqKybTFVlDOfUVaXy59wRhUP7mgEXZo1crnA2lAcY-2Zwj60vf_RvKa_ktEosQ8yCnWgJ5SycsgqJWACxODqR477QPOw1teLM-DJzV2xzRPSv5HUEtvGDBOUCU0wfPM7BjKITkXrjvjXHybyw0MFj");'></div>
+      </div>
+    </section>
+  </main> -->
+
+
+</div>
+
+    <!-- Confirm 버튼 -->
+<div class="sticky bottom-20 px-4 mt-6">
+  <button id="confirmBtn"
+    class="w-full h-14 bg-[var(--primary-color)] text-white text-lg font-bold rounded-xl hover:bg-indigo-600 transition">
+    Confirm
+  </button>
+</div>
+
+    
+<!-- JS 로직 -->
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+    const data = JSON.parse(sessionStorage.getItem("dreamDetails"));
+    if (!data) return;
+
+    // Dream Summary
+    document.getElementById("summaryText").innerText = data.final_content;
+       
+    // 키워드 렌더링
+    const keywordsDiv = document.getElementById("keywords");
+    keywordsDiv.innerHTML = ""; 
+    data.keywords.forEach(kw => {
+      const pill = document.createElement("span");
+      pill.className = "px-3 py-1 bg-indigo-600 text-white rounded-full text-sm cursor-pointer hover:bg-indigo-500";
+      pill.innerText = kw;
+
+      pill.addEventListener("click", () => {
+        sessionStorage.setItem("selectedKeyword",  pill.innerText); // ✅ 클릭한 키워드 저장
+        window.location.href = "/market";             // Market 페이지 이동
+      });
+
+      keywordsDiv.appendChild(pill);
+    });
+
+
+    // ✅ Dream Images 동적 생성
+    const summary = sessionStorage.getItem("dream_summary") || data.final_content || "A mysterious dream";
+    const container = document.getElementById("imageGrid");
+    
+    // 로딩 표시
+    container.innerHTML = `
+      <div class="flex items-center justify-center aspect-square bg-gray-800 rounded-2xl animate-pulse text-gray-400 col-span-2">
+        Generating dream images...
+      </div>
+    `;
+    
+    fetch("/dream_images", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ summary })
+    })
+      .then(res => res.json())
+      .then(imgData => {
+        container.innerHTML = ""; // ✅ 로딩 제거
+        if (imgData.images) {
+
+          sessionStorage.setItem("dream_first_image", imgData.images[0]);
+            
+          imgData.images.forEach(url => {
+            const div = document.createElement("div");
+            div.className = "w-full bg-center bg-no-repeat aspect-square bg-cover rounded-2xl";
+            div.style.backgroundImage = `url(${url})`;
+            container.appendChild(div);
+          });
+        } else {
+          container.innerHTML = "<p class='text-slate-400 col-span-2'>No images generated</p>";
+        }
+      })
+      .catch(err => {
+        console.error("Error loading dream images:", err);
+        container.innerHTML = "<p class='text-red-400 col-span-2'>Failed to generate images</p>";
+      });
+       
+    // Confirm → 첫 번째 키워드 선택
+    document.getElementById("confirmBtn").addEventListener("click", () => {
+      if (data.keywords && data.keywords.length > 0) {
+        const firstKeyword = data.keywords[0].replace(/^\d+\.\s*/, "");
+        sessionStorage.setItem("selectedKeyword", firstKeyword);
+      }
+      window.location.href = "/market";
+    });
+  });
+</script>
+    
+    
+{% include 'footer.html' %}
+</body>
+</html>

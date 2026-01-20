@@ -1,0 +1,52 @@
+<!-- templates/footer.html -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+<footer class="mt-auto bg-[#111118]/80 backdrop-blur-sm">
+  <nav class="flex justify-around border-t border-slate-700/50 px-2 pt-2 pb-4">
+    <a href="{{ url_for('text_main') }}" class="nav-item flex flex-col items-center text-slate-400 w-1/4" data-page="text_main">
+      <span class="material-symbols-outlined"> mic </span>
+      <p class="text-xs">Record</p>
+    </a>
+    <a href="{{ url_for('market') }}" class="nav-item flex flex-col items-center text-slate-400 w-1/4" data-page="market">
+      <span class="material-symbols-outlined"> show_chart </span>
+      <p class="text-xs">Market</p>
+    </a>
+    <a href="{{ url_for('portfolio') }}" class="nav-item flex flex-col items-center text-slate-400 w-1/4" data-page="portfolio">
+      <span class="material-symbols-outlined"> book </span>
+      <p class="text-xs">Portfolio</p>
+    </a>
+    <a href="{{ url_for('profile') }}" class="nav-item flex flex-col items-center text-slate-400 w-1/4" data-page="profile">
+      <span class="material-symbols-outlined"> person </span>
+      <p class="text-xs">profile</p>
+    </a>
+  </nav>
+</footer>
+
+<!-- ✅ Footer Active Script (정확 경로 판별 버전) -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const path = window.location.pathname;
+  const navItems = document.querySelectorAll(".nav-item");
+
+  navItems.forEach(item => {
+    const page = item.dataset.page;
+    const isActive = path === `/${page}`; // ✅ 정확히 일치할 때만 활성화
+    const icon = item.querySelector("span");
+    const label = item.querySelector("p");
+
+    if (isActive) {
+      // 🔹 활성 상태 스타일
+      item.classList.remove("text-slate-400");
+      item.classList.add("text-white", "bg-[var(--primary-color)]/10", "rounded-xl", "px-2", "py-1");
+      icon.classList.add("text-[var(--primary-color)]", "scale-110");
+      label.classList.add("font-bold", "text-[var(--primary-color)]");
+    } else {
+      // 🔹 비활성 상태 복원
+      item.classList.remove("text-white", "bg-[var(--primary-color)]/10", "rounded-xl", "px-2", "py-1");
+      item.classList.add("text-slate-400");
+      icon.classList.remove("text-[var(--primary-color)]", "scale-110");
+      label.classList.remove("font-bold", "text-[var(--primary-color)]");
+    }
+  });
+});
+</script>

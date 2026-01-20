@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+  <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <title>Review Dream</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    :root {
+      --primary-color: #1313ec;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+
+<div class="relative flex min-h-screen flex-col justify-between">
+
+  <!-- Header -->
+  <header class="flex items-center p-4">
+    <button class="text-white">
+      <span class="material-symbols-outlined"> arrow_back </span>
+    </button>
+    <h1 class="text-lg font-bold flex-1 text-center pr-8">Answer the Question</h1>
+  </header>
+
+  <!-- Main -->
+  <main class="flex-1 flex flex-col items-center justify-start p-6 w-full max-w-lg mx-auto">
+    
+    <!-- 아이콘 (마이크 원형 효과 그대로) -->
+    <!-- <div class="relative w-40 h-40 mx-auto mb-6">
+      <div class="absolute inset-0 bg-indigo-500/20 rounded-full animate-pulse"></div>
+      <div class="absolute inset-2 bg-indigo-500/30 rounded-full animate-pulse delay-75"></div>
+      <div class="absolute inset-4 bg-primary rounded-full flex items-center justify-center text-white">
+        <span class="material-symbols-outlined text-6xl"> help </span>
+      </div>
+    </div> -->
+    <div class="relative w-40 h-40 mx-auto mb-6">
+      <!-- 첫 번째 외곽 원 (부드러운 파랑 빛) -->
+      <div class="absolute inset-0 bg-indigo-500/20 rounded-full animate-pulse"></div>
+    
+      <!-- 두 번째 중간 원 (약간 진한 빛) -->
+      <div class="absolute inset-2 bg-indigo-500/30 rounded-full animate-pulse delay-75"></div>
+    
+      <!-- 중앙 핵심 원 -->
+      <div class="absolute inset-4 bg-indigo-600/40 rounded-full flex items-center justify-center">
+        <span class="material-symbols-outlined text-6xl text-indigo-200 drop-shadow-md">
+          help
+        </span>
+      </div>
+    </div>
+
+      
+    <!-- 현재 질문 -->
+    <h2 id="questionText" class="text-2xl font-bold mb-4">Loading question...</h2>
+
+    <!-- 답변 입력창 -->
+    <textarea id="answerInput" class="w-full p-3 rounded-lg text-black text-base mb-4" rows="3" placeholder="Write your answer..."></textarea>
+
+    <!-- 저장 버튼 -->
+    <button id="saveAnswerBtn" class="w-full h-14 bg-primary text-white text-lg font-bold rounded-xl hover:bg-indigo-500 transition-colors duration-300">
+      Save Answer
+    </button>
+
+    <!-- 진행 상태 -->
+    <div id="progress" class="mt-6 text-gray-400"></div>
+  </main>
+
+
+</div>
+
+<!-- JS 로직 -->
+<script>
+  let answers = [];
+  let currentRound = 0;
+  let currentQuestion = "";
+
+  async function loadFirstQuestion() {
+    const dream_story = localStorage.getItem("dream_story") || "";
+
+    const response = await fetch("/get_questions", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ dream_story, answers: [] })
+      //body: JSON.stringify({ dream_story })   // 처음에는 dream_story만 보냄
+    });
+
+    const data = await response.json();
+    currentQuestion = data.question;
+    currentRound = 1;
+      
+    document.getElementById("questionText").innerText = currentQuestion;
+    document.getElementById("progress").innerText = `Question ${currentRound} of 3`;
+  }
+
+  async function nextQuestion(answer) {
+    // 현재 질문/답변 저장
+    answers.push({ question: currentQuestion, answer });
+
+    if (currentRound >= 3) {
+        const dream_story = localStorage.getItem("dream_story") || "";
+        const payload = { dream_story: dream_story, qa: answers };
+        console.log("Finalizing with:", { dream_story, qa: answers }); // 확인용
+        
+      // 3번 끝나면 finalize_dream 호출 → 결과 저장 후 waiting 페이지로 이동
+        fetch("/finalize_dream", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          }).then(res => res.json())
+            .then(data => {
+              sessionStorage.setItem("dreamDetails", JSON.stringify(data));
+              // 일단 waiting으로 이동 (waiting.html에서 3초 후 /details로 자동 이동)
+
+              sessionStorage.setItem("dream_summary", data.final_content);
+                
+              window.location.href = "/waiting";
+            })
+            .catch(err => {
+              console.error("Error finalizing dream:", err);
+              alert("Something went wrong while saving your dream!");
+            });
+
+      return; // 함수 종료
+
+    }
+
+    // 새로운 질문 요청
+    const dream_story = localStorage.getItem("dream_story") || "";
+    const response = await fetch("/get_questions", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ dream_story, answers })  // 답변들까지 같이 보냄
+    });
+
+    const data = await response.json();
+    currentQuestion = data.question;
+    currentRound++;
+
+    document.getElementById("questionText").innerText = currentQuestion;
+    document.getElementById("progress").innerText = `Question ${currentRound} of 3`;
+    document.getElementById("answerInput").value = "";
+  }
+
+  // document.getElementById("saveAnswerBtn").addEventListener("click", () => {
+  //   const ans = document.getElementById("answerInput").value.trim();
+  //   if (!ans) {
+  //     alert("Please write an answer!");
+  //     return;
+  //   }
+  //   nextQuestion(ans);
+  // });
+    document.getElementById("saveAnswerBtn").addEventListener("click", () => {
+      const input = document.getElementById("answerInput");
+      const ans = input.value.trim();
+    
+      if (ans.length === 0) {
+        input.classList.add("ring-2", "ring-red-500");
+        alert("Please write an answer before continuing!");
+        return;
+      }
+    
+      input.classList.remove("ring-2", "ring-red-500");
+      nextQuestion(ans);
+    });
+
+  loadFirstQuestion();
+</script>
+
+{% include 'footer.html' %}
+</body>
+</html>

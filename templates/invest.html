@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- ✅ 반응형 -->
+  <title>Investment Confirmed</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary-color: #1717CF;
+      --text-light: #E5E7EB;
+      --text-dim: rgba(255,255,255,0.7);
+    }
+    body {
+      background: #111121;
+      color: var(--text-light);
+      font-family: 'Space Grotesk', 'Noto Sans', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-center px-4 py-8">
+  <div class="w-full max-w-md bg-[#111121] text-center flex flex-col items-center space-y-6">
+    
+    <!-- ✅ Icon -->
+    <div class="flex items-center justify-center w-24 h-24 rounded-full bg-indigo-500/20">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="#6366F1" class="w-12 h-12">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+      </svg>
+    </div>
+
+    <!-- ✅ Title -->
+    <h1 class="text-2xl md:text-3xl font-bold text-[var(--text-light)]">
+      Investment Confirmed!
+    </h1>
+
+    <!-- ✅ Subtitle -->
+    <p class="text-[var(--text-dim)] text-base leading-relaxed">
+      You have successfully invested in <br>
+      <span class="font-semibold text-[var(--text-light)] invest-keyword">'The Crystal Caverns'</span>.
+    </p>
+
+    <!-- ✅ Info Box -->
+    <div class="w-full bg-[#1C1C27] border border-white/10 rounded-2xl p-6 space-y-4">
+      <div class="flex justify-between items-center">
+        <div>
+          <p class="text-sm text-[var(--text-dim)]">Dream Invested In</p>
+          <p class="text-lg font-semibold text-[var(--text-light)] invest-keyword">The Crystal Caverns</p>
+        </div>
+        <img id="investImage" src="https://placehold.co/64x64" class="w-16 h-16 rounded-xl" />
+      </div>
+
+      <div class="border-t border-white/10 pt-4 space-y-2 text-sm">
+        <div class="flex justify-between">
+          <span class="text-[var(--text-dim)]">Amount Invested</span>
+          <span class="font-semibold text-[var(--text-light)]">500 DC</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-[var(--text-dim)]">New Balance</span>
+          <span class="font-semibold text-[var(--text-light)]">4500 DC</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Buttons -->
+    <div class="w-full flex flex-col space-y-3">
+      <button onclick="window.location.href='/portfolio'" 
+        class="w-full py-3 bg-[var(--primary-color)] text-white font-bold rounded-xl hover:bg-indigo-600 transition">
+        View My Portfolio
+      </button>
+      <button onclick="window.location.href='/market'" 
+        class="w-full py-3 bg-white/10 text-[var(--text-light)] font-medium rounded-xl hover:bg-white/20 transition">
+        Return to the Dream Market
+      </button>
+    </div>
+  </div>
+</body>
+</html>
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const selectedKeyword = sessionStorage.getItem("selectedKeyword") || "Dream";
+  const imgElem = document.getElementById("investImage");
+
+  // ✅ 키워드 업데이트
+  document.querySelectorAll(".invest-keyword").forEach(el => {
+    el.textContent = selectedKeyword;
+  });
+
+  // ✅ 서버에서 이미지 불러오기
+  try {
+    const res = await fetch(`/get_image_by_keyword/${selectedKeyword}`);
+    const data = await res.json();
+
+    if (data.image && imgElem) {
+      imgElem.src = data.image;
+    } else {
+      console.warn("No matching image found for keyword:", selectedKeyword);
+    }
+  } catch (err) {
+    console.error("Error fetching image:", err);
+  }
+});
+</script>
+
+

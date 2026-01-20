@@ -1,0 +1,223 @@
+[
+    {
+        "keyword": "Ghost",
+        "summary": "In my dream, I found myself in a high school and encountered a ghost.",
+        "images": [
+            "/static/images/ghost1.png",
+            "/static/images/ghost2.png"
+        ],
+        "stats": {
+            "Demand": "Medium",
+            "Usage": "1568+",
+            "Growth": "-6%",
+            "History": [
+                623,
+                665,
+                1727,
+                751,
+                1141,
+                1117
+            ]
+        }
+    },
+    {
+        "keyword": "Ocean",
+        "summary": "I saw a mermaid under the deep sea, dancing gracefully.",
+        "images": [
+            "/static/images/ocean1.png",
+            "/static/images/ocean2.png"
+        ],
+        "stats": {
+            "Demand": "High",
+            "Usage": "2100+",
+            "Growth": "+8%",
+            "History": [
+                1100,
+                1200,
+                1400,
+                1500,
+                1700,
+                1900
+            ]
+        }
+    },
+    {
+        "keyword": "City",
+        "summary": "In the city’s sleepless glow, my dreams wandered between neon reflections and silent alleyways.",
+        "images": [
+            "/static/images/city1.png",
+            "/static/images/city2.png"
+        ],
+        "stats": {
+            "Demand": "High",
+            "Usage": "100+",
+            "Growth": "+8%",
+            "History": [
+                1100,
+                1200,
+                400,
+                500,
+                700,
+                2000
+            ]
+        }
+    },
+    {
+        "keyword": "Forest",
+        "summary": "I was walking through an endless forest filled with light.",
+        "images": [
+            "/static/images/forest1.png"
+        ],
+        "stats": {
+            "Demand": "High",
+            "Usage": "1320+",
+            "Growth": "+12%",
+            "History": [
+                500,
+                700,
+                1000,
+                1300,
+                1600,
+                1800
+            ]
+        }
+    },
+    {
+        "keyword": "Candy",
+        "summary": "I had a dream where I ate a huge candy, which seemed similar to cotton candy, though its exact type was unknown to me. As I indulged in this massive treat, I found myself riding a mystical creature that resembled a unicorn, soaring through the sky. Interestingly, after consuming the candy, nothing happened; the dream remained tranquil and uneventful.",
+        "images": [
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-NPiKkTJrxNyUUEsxutEzkmEt.png?st=2025-10-24T04%3A27%3A40Z&se=2025-10-24T06%3A27%3A40Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=77e5a8ec-6bd1-4477-8afc-16703a64f029&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-10-24T04%3A51%3A02Z&ske=2025-10-25T04%3A51%3A02Z&sks=b&skv=2024-08-04&sig=ZADUVuDGXYZNG%2BoaKzUFw/qFRjQkNf0pmlGZOrtMVcY%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-nta3OeVlgi9QKHCnMVXd1Q9Q.png?st=2025-10-24T04%3A27%3A40Z&se=2025-10-24T06%3A27%3A40Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=77e5a8ec-6bd1-4477-8afc-16703a64f029&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-10-24T04%3A51%3A02Z&ske=2025-10-25T04%3A51%3A02Z&sks=b&skv=2024-08-04&sig=eMV3GDJodeVZ55wzwNJLzJkXUSK/0QXLQKcIJYmRaa0%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-Wtc4I7GjCN8kwfI3HOo1yCSu.png?st=2025-10-24T04%3A27%3A41Z&se=2025-10-24T06%3A27%3A41Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=77e5a8ec-6bd1-4477-8afc-16703a64f029&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-10-24T04%3A51%3A02Z&ske=2025-10-25T04%3A51%3A02Z&sks=b&skv=2024-08-04&sig=/obisXeajHEtp%2B3rywz46MIXGrVvc6jc%2BQHiKbGx6AU%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-cfNBmaNXOGkLTFQYRFKbqrSb.png?st=2025-10-24T04%3A27%3A40Z&se=2025-10-24T06%3A27%3A40Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=77e5a8ec-6bd1-4477-8afc-16703a64f029&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-10-24T04%3A51%3A02Z&ske=2025-10-25T04%3A51%3A02Z&sks=b&skv=2024-08-04&sig=q7edWGdkfLgXafkH4mHfZxmi4dpyIBLSU6afdGg9Yzo%3D"
+        ],
+        "stats": {
+            "Demand": "Medium",
+            "Usage": "1366+",
+            "Growth": "-10%",
+            "History": [
+                742,
+                725,
+                557,
+                1412,
+                1120,
+                1659
+            ]
+        }
+    },
+    {
+        "keyword": "Mermaid",
+        "summary": "In my dream, I saw a mermaid under the sea. She was gracefully dancing with the fishes, creating a mesmerizing scene. Watching her elegant movements alongside the vibrant aquatic life left me surprisingly awestruck.",
+        "images": [
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-08jD9bwh00SxS2Cm5l1sCvF4.png?st=2025-11-02T10%3A07%3A41Z&se=2025-11-02T12%3A07%3A41Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=ed3ea2f9-5e38-44be-9a1b-7c1e65e4d54f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-11-02T11%3A07%3A41Z&ske=2025-11-03T11%3A07%3A41Z&sks=b&skv=2024-08-04&sig=b66/j3D%2BHa9zPe7t3SG1hcWLX0/wTRjUM1/sUXgsW%2B8%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-Hucmi7Jl7UTjvHjIAR69mbmi.png?st=2025-11-02T10%3A07%3A43Z&se=2025-11-02T12%3A07%3A43Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=ed3ea2f9-5e38-44be-9a1b-7c1e65e4d54f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-11-02T11%3A07%3A41Z&ske=2025-11-03T11%3A07%3A41Z&sks=b&skv=2024-08-04&sig=5HE0kC0R4QGG2j9PlCtldFmC1xGbxVceb5BqSDjqM6I%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-76tqFgI3AwAYXqdQbNhsfC01.png?st=2025-11-02T10%3A07%3A42Z&se=2025-11-02T12%3A07%3A42Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=ed3ea2f9-5e38-44be-9a1b-7c1e65e4d54f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-11-02T11%3A07%3A41Z&ske=2025-11-03T11%3A07%3A41Z&sks=b&skv=2024-08-04&sig=%2BEKZvUd2T7lg4O3VaQ8TMeoMww1Y4xKdLkx6OBgDp8Q%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-NN4PCN5CvcviZbjK3CXYi2Or.png?st=2025-11-02T10%3A07%3A42Z&se=2025-11-02T12%3A07%3A42Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=ed3ea2f9-5e38-44be-9a1b-7c1e65e4d54f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-11-02T11%3A07%3A41Z&ske=2025-11-03T11%3A07%3A41Z&sks=b&skv=2024-08-04&sig=25Z3h7xEFMYtuyHJJdzR39ZRwDGeuymTpMQlDtVdIhg%3D"
+        ],
+        "stats": {
+            "Demand": "Low",
+            "Usage": "1045+",
+            "Growth": "+9%",
+            "History": [
+                961,
+                787,
+                687,
+                1376,
+                1388,
+                1177
+            ]
+        }
+    },
+    {
+        "keyword": "Mermaid",
+        "summary": "In my dream, I saw a mermaid under the sea. She was dancing gracefully with the fishes, creating a mesmerizing scene. I was surprised by the beauty and wonder of the underwater world and the mermaid's enchanting presence, which left a lasting impression on me.",
+        "images": [
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-bcq7HfIVGCQFInHWvTjMViRG.png?st=2025-11-02T10%3A07%3A57Z&se=2025-11-02T12%3A07%3A57Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=b1a0ae1f-618f-4548-84fd-8b16cacd5485&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-11-02T11%3A07%3A57Z&ske=2025-11-03T11%3A07%3A57Z&sks=b&skv=2024-08-04&sig=qFSNZdQrrLU5nPCaxnOfw9n5QDjr9YH1h22toQ31iko%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-1vS9oR4JIizbjOf4bFDhFMn2.png?st=2025-11-02T10%3A07%3A57Z&se=2025-11-02T12%3A07%3A57Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=b1a0ae1f-618f-4548-84fd-8b16cacd5485&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-11-02T11%3A07%3A57Z&ske=2025-11-03T11%3A07%3A57Z&sks=b&skv=2024-08-04&sig=6iuOsjI6lgXd6juQZjJ6FEdsLGqt5MGH5WXcNPwQcPw%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-JvzI9u2G4K8XTb6Gutc5CGoO.png?st=2025-11-02T10%3A07%3A57Z&se=2025-11-02T12%3A07%3A57Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=b1a0ae1f-618f-4548-84fd-8b16cacd5485&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-11-02T11%3A07%3A57Z&ske=2025-11-03T11%3A07%3A57Z&sks=b&skv=2024-08-04&sig=iteEgLCRlE%2BGMWefsJ1nzr9ZoZAkEswYMvNxuhBTt4g%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-pD81ZxYUNZ5IBIOocFDVoApg.png?st=2025-11-02T10%3A07%3A57Z&se=2025-11-02T12%3A07%3A57Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=b1a0ae1f-618f-4548-84fd-8b16cacd5485&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-11-02T11%3A07%3A57Z&ske=2025-11-03T11%3A07%3A57Z&sks=b&skv=2024-08-04&sig=ZG%2BRn35%2Bgy540DnDeuVfsJtyw585sXFeWNPZ3i35z8E%3D"
+        ],
+        "stats": {
+            "Demand": "Medium",
+            "Usage": "1440+",
+            "Growth": "+14%",
+            "History": [
+                1650,
+                1528,
+                1319,
+                1227,
+                1718,
+                637
+            ]
+        }
+    },
+    {
+        "keyword": "Mirror",
+        "summary": "I was at home, looking at myself in the mirror, when I noticed something strange happening—flowers were blooming in my hair. These flowers were not ordinary; something transparent and round formed at the root of each strand of my hair. The sight was so creepy that I couldn’t bring myself to touch it.",
+        "images": [
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-kB0Btf7TMQgK2xK957NNO30a.png?st=2026-01-19T23%3A52%3A26Z&se=2026-01-20T01%3A52%3A26Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=7daae675-7b42-4e2e-ab4c-8d8419a28d99&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-19T23%3A03%3A15Z&ske=2026-01-20T23%3A03%3A15Z&sks=b&skv=2024-08-04&sig=4I02%2Bxju1vIlxJTtu2K9LpfSFfWaLfExjbW989Ffwq0%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-YhKxdOvyc9PYjKQ5wOZbORhi.png?st=2026-01-19T23%3A52%3A26Z&se=2026-01-20T01%3A52%3A26Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=7daae675-7b42-4e2e-ab4c-8d8419a28d99&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-19T23%3A03%3A15Z&ske=2026-01-20T23%3A03%3A15Z&sks=b&skv=2024-08-04&sig=IkjC1IV0/kjwOTyw5wK82M2g0v0YnKCcdFMXZwbbqv4%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-ktrmHZNbeN15yFbLowFogwoU.png?st=2026-01-19T23%3A52%3A26Z&se=2026-01-20T01%3A52%3A26Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=7daae675-7b42-4e2e-ab4c-8d8419a28d99&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-19T23%3A03%3A15Z&ske=2026-01-20T23%3A03%3A15Z&sks=b&skv=2024-08-04&sig=UuYxTVamnp4g9y6EpUmutmHQy1kJDHwmpdlnkHJobnA%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-4ipzDI5gV6GfzXzhXjHht7ve.png?st=2026-01-19T23%3A52%3A26Z&se=2026-01-20T01%3A52%3A26Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=7daae675-7b42-4e2e-ab4c-8d8419a28d99&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-19T23%3A03%3A15Z&ske=2026-01-20T23%3A03%3A15Z&sks=b&skv=2024-08-04&sig=ocs/b%2BryIO7c9yMcsLwyeqAWo5gLtcAEoTDb2iJNCoE%3D"
+        ],
+        "stats": {
+            "Demand": "Low",
+            "Usage": "1683+",
+            "Growth": "-3%",
+            "History": [
+                529,
+                632,
+                747,
+                1096,
+                1411,
+                1469
+            ]
+        }
+    },
+    {
+        "keyword": "Invisibility",
+        "summary": "In my dream, I became invisible and found myself in a crowded shopping mall, feeling as if I were walking on the moon. Without any clothes, I ran around freely, my body feeling light, which made it easy to jump. This sense of freedom was exhilarating. As I moved through the bustling crowd, people went about their shopping, unaware of my presence and seemingly unfazed by items moving around on their own. The experience was surreal, highlighting my newfound invisibility and the weightless sensation that",
+        "images": [
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-QfQfepuXKZbN8YV8JjDX5KFq.png?st=2026-01-19T23%3A57%3A25Z&se=2026-01-20T01%3A57%3A25Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=f1dafa11-a0c2-4092-91d4-10981fbda051&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-20T00%3A57%3A25Z&ske=2026-01-21T00%3A57%3A25Z&sks=b&skv=2024-08-04&sig=IfPiaaZJHsefMEiMqeitJddHumD067xHjmOPObroEWA%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-sJYtLjPa7kyivpnbfShGMByL.png?st=2026-01-19T23%3A57%3A25Z&se=2026-01-20T01%3A57%3A25Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=f1dafa11-a0c2-4092-91d4-10981fbda051&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-20T00%3A57%3A25Z&ske=2026-01-21T00%3A57%3A25Z&sks=b&skv=2024-08-04&sig=ZZDYTBWmkVq1yJ7gutv6yKpxM84IG58L7zBsXi26ojU%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-BmYaqgJVHsevUtQWbUpEbrzJ.png?st=2026-01-19T23%3A57%3A25Z&se=2026-01-20T01%3A57%3A25Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=f1dafa11-a0c2-4092-91d4-10981fbda051&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-20T00%3A57%3A25Z&ske=2026-01-21T00%3A57%3A25Z&sks=b&skv=2024-08-04&sig=R8keGkK/GMr4qkgCM7XZa7nGIiIWf4hRhWm9KkfGe5k%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-fbh2NhWnB8u1HLELfitNV5oJ.png?st=2026-01-19T23%3A57%3A25Z&se=2026-01-20T01%3A57%3A25Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=f1dafa11-a0c2-4092-91d4-10981fbda051&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-20T00%3A57%3A25Z&ske=2026-01-21T00%3A57%3A25Z&sks=b&skv=2024-08-04&sig=bFTvU9BVQFax51v5m8LESrJY3o8zYJ0flkNUAOGcrt4%3D"
+        ],
+        "stats": {
+            "Demand": "Low",
+            "Usage": "704+",
+            "Growth": "+13%",
+            "History": [
+                893,
+                1741,
+                1519,
+                1781,
+                1830,
+                1286
+            ]
+        }
+    },
+    {
+        "keyword": "Lost bag",
+        "summary": "I had a dream where I was talking with my friend on the street when I suddenly realized I had lost my bag. I started looking for it, but despite my efforts, I couldn’t find it. My bag was important to me because it contained items I needed for class, like my laptop, books, and writing tools. Unfortunately, I didn’t know where my friend and I went next, as the dream ended before anything else happened.",
+        "images": [
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-YlPcVkAVVt3o6gBZ2upye0rw.png?st=2026-01-20T00%3A00%3A49Z&se=2026-01-20T02%3A00%3A49Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=8b33a531-2df9-46a3-bc02-d4b1430a422c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-19T20%3A15%3A50Z&ske=2026-01-20T20%3A15%3A50Z&sks=b&skv=2024-08-04&sig=aSM/vOT9cqL8wv5zk3k3AJnxYt9vwi83pVus%2BR3H%2B8k%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-jyh94fSdklhCtwCe1mIEUBL1.png?st=2026-01-20T00%3A00%3A49Z&se=2026-01-20T02%3A00%3A49Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=8b33a531-2df9-46a3-bc02-d4b1430a422c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-19T20%3A15%3A50Z&ske=2026-01-20T20%3A15%3A50Z&sks=b&skv=2024-08-04&sig=6okQUXAPlrznzndVovJCYDH3yoR4J5bT48SAXjDU5BQ%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-HLbyLov9t1ZcH386E0brO8db.png?st=2026-01-20T00%3A00%3A49Z&se=2026-01-20T02%3A00%3A49Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=8b33a531-2df9-46a3-bc02-d4b1430a422c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-19T20%3A15%3A50Z&ske=2026-01-20T20%3A15%3A50Z&sks=b&skv=2024-08-04&sig=2nU3cXgE6xgnBxm0vVQllyPHL4lu0bVNnXlaOgayQK8%3D",
+            "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Pu3JN2U5BovarPzDiYPPVWnc/user-y2jbUfOMUJ6qpI7KclFtMde8/img-wqejsPoJZfptMQhGALItQPUh.png?st=2026-01-20T00%3A00%3A49Z&se=2026-01-20T02%3A00%3A49Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=8b33a531-2df9-46a3-bc02-d4b1430a422c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-19T20%3A15%3A50Z&ske=2026-01-20T20%3A15%3A50Z&sks=b&skv=2024-08-04&sig=Vq2RcbyJz13NoLdxwupudaZd98Gaua0k5qtQI60HCGc%3D"
+        ],
+        "stats": {
+            "Demand": "Low",
+            "Usage": "1750+",
+            "Growth": "-1%",
+            "History": [
+                1454,
+                1790,
+                536,
+                1957,
+                1257,
+                1437
+            ]
+        }
+    }
+]

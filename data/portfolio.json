@@ -1,0 +1,36 @@
+{
+  "trending": [
+    {
+      "title": "Soaring Heights",
+      "keyword": "Flying",
+      "growth": "+25.8%",
+      "image": "/static/images/soaring.png"
+    },
+    {
+      "title": "Abyssal Depths",
+      "keyword": "Underwater",
+      "growth": "+18.2%",
+      "image": "/static/images/abyssal.png"
+    }
+  ],
+  "movers": [
+    {
+      "title": "Forest",
+      "growth": "+12%",
+      "price": "$18.30",
+      "image": "/static/images/forest.png"
+    },
+    {
+      "title": "Ocean",
+      "growth": "-5%",
+      "price": "$10.45",
+      "image": "/static/images/ocean.png"
+    },
+    {
+      "title": "City",
+      "growth": "+8%",
+      "price": "$14.80",
+      "image": "/static/images/city.png"
+    }
+  ]
+}

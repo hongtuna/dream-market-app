@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary-color: #1717CF;
+      --text-light: #E5E7EB;
+      --bg-dark: #111118;
+      --card-dark: #1C1C26;
+    }
+    body {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Space Grotesk', 'Noto Sans', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-[var(--bg-dark)] text-[var(--text-light)]">
+  <!-- ✅ Header -->
+  <header class="sticky top-0 z-10 bg-[#111118]/80 backdrop-blur-md p-4 flex justify-between items-center border-b border-slate-700/50">
+    <h1 class="text-xl font-bold">Dream Portfolio</h1>
+    <button class="text-slate-400 hover:text-white transition">Filter</button>
+  </header>
+
+  <!-- ✅ Main -->
+  <main class="p-4 space-y-10 pb-24"> <!-- pb-24: footer 영역 확보 -->
+    
+    <!-- 🔹 Trending Section -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">Trending Dreams</h2>
+      <div id="trendingContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+    </section>
+
+    <!-- 🔹 Market Movers Section -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">Market Movers</h2>
+      <div id="moversContainer" class="space-y-3"></div>
+    </section>
+
+  </main>
+
+  <!-- ✅ Footer include -->
+  {% include 'footer.html' %}
+
+  <!-- ✅ Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      try {
+        const res = await fetch("/portfolio_data");
+        const data = await res.json();
+    
+        // Trending Dreams
+        const trendingContainer = document.getElementById("trendingContainer");
+        trendingContainer.innerHTML = data.trending.map(item => `
+          <div class="bg-[var(--card-dark)] p-4 rounded-xl flex flex-col space-y-3 hover:scale-[1.02] transition-transform cursor-pointer"
+               onclick="openMarket('${item.keyword}')">
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="text-lg font-semibold">${item.keyword}</p>
+                <p class="text-sm text-slate-400">${item.summary}</p>
+              </div>
+              <p class="text-green-400 font-medium">${item.stats.Growth}</p>
+            </div>
+            <img src="${item.images[0]}" class="rounded-lg w-full h-[180px] object-cover" />
+          </div>
+        `).join("");
+    
+        // Market Movers
+        const moversContainer = document.getElementById("moversContainer");
+        moversContainer.innerHTML = data.movers.map(item => {
+          const growthColor = item.stats.Growth.startsWith('-') ? "text-red-400" : "text-green-400";
+          return `
+            <div class="flex items-center bg-[var(--card-dark)] p-3 rounded-lg gap-4 hover:bg-[#252534] transition cursor-pointer"
+                 onclick="openMarket('${item.keyword}')">
+              <img src="${item.images[0]}" class="w-14 h-14 rounded-lg object-cover" />
+              <div class="flex-1">
+                <p class="font-medium">${item.keyword}</p>
+                <p class="${growthColor} text-sm">${item.stats.Growth}</p>
+              </div>
+              <p class="font-semibold">${item.stats.Usage}</p>
+            </div>
+          `;
+        }).join("");
+      } catch (err) {
+        console.error("Error loading portfolio:", err);
+      }
+    });
+    
+    function openMarket(keyword) {
+      sessionStorage.setItem("selectedKeyword", keyword);
+      window.location.href = "/market";
+    }
+    </script>
+
+    
+</body>
+</html>

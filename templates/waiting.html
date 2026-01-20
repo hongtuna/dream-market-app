@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Processing Dream</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#111118] text-white flex items-center justify-center min-h-screen" 
+      style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+
+  <div class="text-center">
+    <!-- 로딩 애니메이션 -->
+    <div class="flex justify-center mb-6">
+      <div class="w-16 h-16 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+    </div>
+
+    <h1 class="text-2xl font-bold mb-2">Processing your dream…</h1>
+    <p class="text-gray-400">Please wait while we summarize and extract keywords.</p>
+  </div>
+
+  <script>
+    // 3초 후 details 페이지로 이동
+    setTimeout(() => {
+      window.location.href = "/details";
+    }, 3000);
+  </script>
+</body>
+</html>
+
