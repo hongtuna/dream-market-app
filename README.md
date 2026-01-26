@@ -22,3 +22,7 @@ OPENAI_API_KEY → your OpenAI API key
 (optional) PYTHON_VERSION → 3.11  
 
 
+# Anonymized Repository for Peer Review 
+This repository is provided solely for the purpose of anonymous peer review. 
+All identifying information related to the authors, institutions, and prior publications has been removed or anonymized to comply with double-blind review requirements. 
+This repository will not be updated during the review process. Public access and full documentation will be provided upon publication.
