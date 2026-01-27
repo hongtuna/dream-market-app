@@ -17,10 +17,6 @@ openai==1.44.0
 httpx==0.27.2  
 python-dateutil==2.9.0.post0  
 
-- Compatible with Python 3.9 and above (zoneinfo is built-in)
-- You may add `pandas` for CSV or structured data processing
-
-
 
 ## ✅ Environment Variables
 
